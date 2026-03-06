@@ -1,0 +1,169 @@
+<!--
+Program name: thankyou.html
+Author: Israa Wadif
+Date created: March 1, 2026
+Date last edited: March 5, 2026
+Version: 1.7
+Description: Thank you page displayed after successful patient registration form submission. Includes header, footer, and confirmation message.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation - We'R'Docs Medical</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Additional styles for thank you page */
+        .thank-you-container {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #E8F4F8 0%, #F0F8FF 100%);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .thank-you-container h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5em;
+            color: #0066CC;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-container p {
+            font-size: 1.1em;
+            color: #333333;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .confirmation-icon {
+            font-size: 4em;
+            color: #28A745;
+            margin-bottom: 20px;
+        }
+
+        .next-steps {
+            background-color: #FFFFFF;
+            border-left: 4px solid #28A745;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .next-steps h3 {
+            font-family: 'Merriweather', serif;
+            color: #0066CC;
+            margin-bottom: 15px;
+        }
+
+        .next-steps ul {
+            list-style-position: inside;
+            color: #333333;
+        }
+
+        .next-steps li {
+            margin-bottom: 10px;
+        }
+
+        .return-button {
+            background-color: #0066CC;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .return-button:hover {
+            background-color: #0052A3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Banner Section -->
+    <div id="header" class="header-banner">
+        <div class="banner-content">
+            <img src="medical-logo.png" alt="We'R'Docs Medical Logo" class="logo">
+            <div class="banner-text">
+                <h1>We'R'Docs Medical</h1>
+                <p id="current-date" class="current-date">Loading date...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="main-content" class="main-content">
+        <div class="form-container">
+            <div class="thank-you-container">
+                <div class="confirmation-icon">✓</div>
+                <h2>Thank You for Your Submission!</h2>
+                <p>Your patient registration form has been successfully received.</p>
+                <p>We appreciate you choosing We'R'Docs Medical for your healthcare needs.</p>
+
+                <div class="next-steps">
+                    <h3>What Happens Next?</h3>
+                    <ul>
+                        <li>Your registration information has been securely stored</li>
+                        <li>A confirmation email will be sent to the address you provided</li>
+                        <li>Our medical team will review your information within 24 hours</li>
+                        <li>You will receive your patient ID and login credentials via email</li>
+                        <li>You can then schedule your first appointment online</li>
+                    </ul>
+                </div>
+
+                <p><strong>If you have any questions, please contact us at:</strong></p>
+                <p>Phone: (281) 555-0123 | Email: info@werdocs.com</p>
+
+                <button class="return-button" onclick="window.location.href='patient-form.html'">Return to Registration</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <p><strong>We'R'Docs Medical</strong></p>
+                <p>PO BOX 18881</p>
+                <p>Sugar Land, TX 77496</p>
+            </div>
+            <div class="footer-column">
+                <button class="footer-button" onclick="alert('Contact Us: info@werdocs.com')">CONTACT US</button>
+            </div>
+            <div class="footer-column">
+                <p><strong>Follow Us</strong></p>
+                <a href="#" class="social-link">Facebook</a> | 
+                <a href="#" class="social-link">Twitter</a> | 
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Dynamic Date -->
+    <script>
+        // Display current date dynamically
+        function displayCurrentDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', options);
+            document.getElementById('current-date').textContent = 'Today is: ' + dateString;
+        }
+
+        // Initialize date on page load
+        window.addEventListener('DOMContentLoaded', displayCurrentDate);
+    </script>
+</body>
+</html>
+<!-- END OF DOCUMENT: thankyou.html -->
