@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+
+  <header class="top-header">
+    <h1>We'R'Docs Medical</h1>
+    <p id="todayDate"></p>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- LEFT SIDE FORM -->
+    <section class="form-section">
+      <h2>Set Up a New Account</h2>
+
+      <form id="registrationForm">
+
+        <div>
+          <label>First Name:</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Last Name:</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Budget:</label>
+          <input type="range" id="budget" min="200" max="2000" value="1100" oninput="updateSlider()">
+          <span id="budgetValue">$1100</span>
+        </div>
+
+        <div>
+          <button type="button">Review</button>
+          <button type="submit">Submit</button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- RIGHT SIDE REVIEW -->
+    <section class="review-section">
+      <h2>Error / Review Area</h2>
+
+      <div id="errorMessages"></div>
+
+      <table id="reviewTable">
+        <tbody></tbody>
+      </table>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
