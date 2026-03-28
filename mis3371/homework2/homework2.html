@@ -232,23 +232,23 @@
             <label><input type="radio" name="vaccinated" value="Unsure"> Unsure</label>
           </fieldset>
 
-          <div class="form-row">
-            <label for="budget">Level of Pain:</label>
-            <div class="slider-wrap">
-              <input
-                type="range"
-                id="budget"
-                name="budget"
-                min="20000"
-                max="200000"
-                step="5000"
-                value="110000"
-                oninput="updateSlider()"
-                title="Slide to choose a budget range."
-              >
-              <span id="budgetValue">$110,000</span>
-            </div>
-          </div>
+         <div class="form-row">
+  <label for="painLevel">Level of Pain:</label>
+  <div class="slider-wrap">
+    <input
+      type="range"
+      id="painLevel"
+      name="painLevel"
+      min="1"
+      max="10"
+      step="1"
+      value="10"
+      oninput="updateSlider()"
+      title="Slide to choose a level of pain."
+    >
+    <span id="budgetValue">10</span>
+  </div>
+</div>
 
           <div class="form-row textarea-row">
             <label for="about">Tell Us About Yourself:</label>
