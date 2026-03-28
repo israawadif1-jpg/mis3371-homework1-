@@ -103,8 +103,8 @@ function reviewForm() {
     ["Address", addr1 + (addr2 ? " " + addr2 : "") + ", " + city + ", " + state + " " + zip],
     ["Conditions", conditions || "None selected"],
     ["Vaccinated", vaccinated],
-   ["Level of Pain", document.getElementById("painLevel").value],
-    ["About You", about || "No additional comments"],
+    ["Level of Pain", document.getElementById("painLevel").value],
+    ["Describe Symptoms", about || "No additional comments"],
     ["User ID", userId],
     ["Password", password]
   ];
