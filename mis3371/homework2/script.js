@@ -26,7 +26,6 @@ function updateSlider() {
 
   painValue.textContent = painLevel.value;
 }
-}
 
 function reviewForm() {
   const form = document.getElementById("registrationForm");
