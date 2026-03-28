@@ -8,7 +8,6 @@
 </head>
 <body>
   <div class="page-container">
-
     <header class="top-header">
       <div>
         <h1>We'R'Docs Medical</h1>
@@ -232,23 +231,24 @@
             <label><input type="radio" name="vaccinated" value="Unsure"> Unsure</label>
           </fieldset>
 
-         <div class="form-row">
-  <label for="painLevel">Level of Pain:</label>
-  <div class="slider-wrap">
-    <input
-      type="range"
-      id="painLevel"
-      name="painLevel"
-      min="1"
-      max="10"
-      step="1"
-      value="10"
-      oninput="updateSlider()"
-      title="Slide to choose a level of pain."
-    >
-    <span id="painValue">10</span>
-  </div>
-</div>
+          <div class="form-row">
+            <label for="painLevel">Level of Pain:</label>
+            <div class="slider-wrap">
+              <input
+                type="range"
+                id="painLevel"
+                name="painLevel"
+                min="1"
+                max="10"
+                step="1"
+                value="10"
+                oninput="updateSlider()"
+                title="Slide to choose a level of pain from 1 to 10."
+              >
+              <div class="pain-scale">1 to 10</div>
+              <span id="painValue">10</span>
+            </div>
+          </div>
 
           <div class="form-row textarea-row">
             <label for="about">Describe Symptoms:</label>
