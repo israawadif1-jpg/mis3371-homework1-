@@ -22,14 +22,27 @@
       <form id="registrationForm">
 
         <div>
-          <label>First Name:</label>
-          <input type="text" id="fname">
-        </div>
+  <label>First Name:</label>
+  <input type="text" id="fname"
+  pattern="[A-Za-z'-]{1,30}"
+  title="1–30 characters. Letters, apostrophes, and dashes only."
+  required>
+</div>
 
-        <div>
-          <label>Last Name:</label>
-          <input type="text" id="lname">
-        </div>
+<div>
+  <label>Middle Initial:</label>
+  <input type="text" id="mi"
+  pattern="[A-Za-z]{1}"
+  title="Single letter only">
+</div>
+
+<div>
+  <label>Last Name:</label>
+  <input type="text" id="lname"
+  pattern="[A-Za-z0-9'-]{1,30}"
+  title="1–30 characters. Letters, numbers (2–5), apostrophes, and dashes only."
+  required>
+</div>
 
         <div>
           <label>Budget:</label>
