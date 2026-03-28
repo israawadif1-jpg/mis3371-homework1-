@@ -21,10 +21,11 @@ window.onload = function () {
 };
 
 function updateSlider() {
-  const budget = document.getElementById("budget");
-  const budgetValue = document.getElementById("budgetValue");
-  const formatted = Number(budget.value).toLocaleString();
-  budgetValue.textContent = "$" + formatted;
+  const painLevel = document.getElementById("painLevel");
+  const painValue = document.getElementById("painValue");
+
+  painValue.textContent = painLevel.value;
+}
 }
 
 function reviewForm() {
@@ -103,7 +104,7 @@ function reviewForm() {
     ["Address", addr1 + (addr2 ? " " + addr2 : "") + ", " + city + ", " + state + " " + zip],
     ["Conditions", conditions || "None selected"],
     ["Vaccinated", vaccinated],
-    ["Home Budget", "$" + Number(document.getElementById("budget").value).toLocaleString()],
+   ["Level of Pain", document.getElementById("painLevel").value],
     ["About You", about || "No additional comments"],
     ["User ID", userId],
     ["Password", password]
