@@ -24,7 +24,9 @@ function updateSlider() {
   const painLevel = document.getElementById("painLevel");
   const painValue = document.getElementById("painValue");
 
-  painValue.textContent = painLevel.value;
+  if (painLevel && painValue) {
+    painValue.textContent = painLevel.value;
+  }
 }
 
 function reviewForm() {
@@ -78,6 +80,7 @@ function reviewForm() {
   const state = document.getElementById("state").value;
   let zip = document.getElementById("zip").value;
   const about = document.getElementById("about").value;
+  const painLevel = document.getElementById("painLevel").value;
 
   if (zip.length > 5) {
     zip = zip.substring(0, 5);
@@ -103,7 +106,7 @@ function reviewForm() {
     ["Address", addr1 + (addr2 ? " " + addr2 : "") + ", " + city + ", " + state + " " + zip],
     ["Conditions", conditions || "None selected"],
     ["Vaccinated", vaccinated],
-    ["Level of Pain", document.getElementById("painLevel").value],
+    ["Level of Pain", painLevel + " out of 10"],
     ["Describe Symptoms", about || "No additional comments"],
     ["User ID", userId],
     ["Password", password]
@@ -111,7 +114,14 @@ function reviewForm() {
 
   rows.forEach(function (row) {
     const tr = document.createElement("tr");
-    tr.innerHTML = "<td><strong>" + row[0] + "</strong></td><td>" + row[1] + "</td>";
+    const td1 = document.createElement("td");
+    const td2 = document.createElement("td");
+
+    td1.innerHTML = "<strong>" + row[0] + "</strong>";
+    td2.textContent = row[1];
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
     tbody.appendChild(tr);
   });
 
