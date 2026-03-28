@@ -9,7 +9,6 @@
 
 <div class="page-container">
 
-  <!-- HEADER -->
   <header class="top-header">
     <h1>We'R'Docs Medical</h1>
     <p id="todayDate"></p>
@@ -17,92 +16,32 @@
 
   <main class="main-layout">
 
-    <!-- LEFT SIDE FORM -->
     <section class="form-section">
       <h2>Set Up a New Account</h2>
 
       <form id="registrationForm">
 
-        <!-- NAME -->
         <div>
           <label>First Name:</label>
-          <input type="text" id="fname" name="fname">
+          <input type="text" id="fname">
         </div>
 
         <div>
           <label>Last Name:</label>
-          <input type="text" id="lname" name="lname">
+          <input type="text" id="lname">
         </div>
 
-        <!-- EMAIL -->
-        <div>
-          <label>Email:</label>
-          <input type="email" id="email" name="email">
-        </div>
-
-        <!-- PHONE -->
-        <div>
-          <label>Phone:</label>
-          <input type="text" id="phone" name="phone">
-        </div>
-
-        <!-- DATE -->
-        <div>
-          <label>Date of Birth:</label>
-          <input type="date" id="dob" name="dob">
-        </div>
-
-        <!-- SLIDER -->
         <div>
           <label>Budget:</label>
           <input type="range" id="budget" min="200" max="2000" value="1100" oninput="updateSlider()">
           <span id="budgetValue">$1100</span>
         </div>
 
-        <!-- TEXT AREA -->
-        <div>
-          <label>About You:</label>
-          <textarea id="about"></textarea>
-        </div>
-
-        <!-- USER ID -->
-        <div>
-          <label>User ID:</label>
-          <input type="text" id="userid">
-        </div>
-
-        <!-- PASSWORD -->
-        <div>
-          <label>Password:</label>
-          <input type="password" id="password">
-        </div>
-
-        <div>
-          <label>Re-enter Password:</label>
-          <input type="password" id="confirmPassword">
-        </div>
-
-        <!-- BUTTONS -->
-        <div>
-          <button type="button">Review</button>
-          <button type="submit">Submit</button>
-          <button type="reset">Clear</button>
-        </div>
-
       </form>
     </section>
 
-    <!-- RIGHT SIDE REVIEW -->
     <section class="review-section">
-      <h2>Error / Review Area</h2>
-
-      <div id="errorMessages"></div>
-
-      <h3>Please Review This Information</h3>
-      <table id="reviewTable">
-        <tbody></tbody>
-      </table>
-
+      <h2>Review Area</h2>
     </section>
 
   </main>
