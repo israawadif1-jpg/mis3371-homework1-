@@ -1,1 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cfeaf5;
+  margin: 0;
+  padding: 20px;
+}
 
+.page-container {
+  width: 95%;
+  margin: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #666;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.top-header h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.form-section,
+.review-section {
+  background-color: #ff2b2b;
+  color: white;
+  padding: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+label {
+  display: inline-block;
+  width: 170px;
+  vertical-align: top;
+  padding-top: 7px;
+}
+
+.input-wrap {
+  width: 280px;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: Arial, sans-serif;
+}
+
+input,
+select,
+textarea {
+  padding: 6px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.choice-group {
+  margin: 15px 0;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 12px;
+}
+
+.choice-group legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+.choice-group label {
+  width: auto;
+  display: block;
+  margin-bottom: 6px;
+  padding-top: 0;
+}
+
+.choice-group input {
+  width: auto;
+}
+
+.slider-wrap {
+  display: inline-block;
+  width: 280px;
+  max-width: 100%;
+}
+
+.slider-wrap input[type="range"] {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.pain-scale {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+#painValue {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.button-row {
+  margin-top: 18px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#errorMessages {
+  color: yellow;
+  font-weight: bold;
+  margin-bottom: 15px;
+  min-height: 24px;
+}
+
+#reviewTable {
+  width: 100%;
+  background: white;
+  color: black;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#reviewTable td,
+#reviewTable th {
+  border: 1px solid #999;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.field-error {
+  color: yellow;
+  font-size: 13px;
+  min-height: 18px;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.group-error {
+  margin-top: 8px;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 2px solid yellow;
+  background-color: #fff4f4;
+}
+
+input.valid,
+select.valid,
+textarea.valid {
+  border: 2px solid #4caf50;
+}
