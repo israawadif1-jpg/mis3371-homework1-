@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #cfe0ea;
+}
+
+.top-header {
+  position: sticky;
+  top: 0;
+  background-color: #cfe0ea;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  z-index: 1000;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-section,
+.review-section {
+  background-color: #ff2a2a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-section {
+  width: 50%;
+}
+
+.review-section {
+  width: 40%;
+  height: fit-content;
+}
+
+.form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+select,
+button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+fieldset {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 15px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.error-message {
+  color: yellow;
+  font-size: 12px;
+}
+
+.iframe-section {
+  padding: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
