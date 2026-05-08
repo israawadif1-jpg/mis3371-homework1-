@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 4 - We'R'Docs Medical</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="top-header">
+
+    <div class="welcome-area">
+      <h1>We'R'Docs Medical</h1>
+
+      <div id="welcomeMessage">
+        Welcome New User
+      </div>
+
+      <div id="newUserArea"></div>
+    </div>
+
+    <div class="date-area">
+      <p id="todayDate"></p>
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-layout">
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+
+      <h2>Patient Registration Form - Homework 4</h2>
+
+      <form id="registrationForm" action="thankyou.html">
+
+        <!-- REMEMBER ME -->
+        <div class="form-row remember-row">
+          <label>
+            <input type="checkbox" id="rememberMe" checked>
+            Remember Me
+          </label>
+        </div>
+
+        <!-- FIRST NAME -->
+        <div class="form-row">
+          <label for="fname">First Name:</label>
+
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            maxlength="30"
+            placeholder="Enter first name"
+            title="Letters, apostrophes, and dashes only">
+
+          <small class="error-message" id="fnameError"></small>
+        </div>
+
+        <!-- MIDDLE INITIAL -->
+        <div class="form-row">
+          <label for="mi">Middle Initial:</label>
+
+          <input
+            type="text"
+            id="mi"
+            name="mi"
+            maxlength="1">
+
+          <small class="error-message" id="miError"></small>
+        </div>
+
+        <!-- LAST NAME -->
+        <div class="form-row">
+          <label for="lname">Last Name:</label>
+
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            maxlength="30">
+
+          <small class="error-message" id="lnameError"></small>
+        </div>
+
+        <!-- DOB -->
+        <div class="form-row">
+          <label for="dob">Date of Birth:</label>
+
+          <input
+            type="date"
+            id="dob"
+            name="dob">
+
+          <small class="error-message" id="dobError"></small>
+        </div>
+
+        <!-- ID -->
+        <div class="form-row">
+          <label for="idNumber">ID Number:</label>
+
+          <input
+            type="password"
+            id="idNumber"
+            name="idNumber"
+            maxlength="9"
+            placeholder="9 digits">
+
+          <small class="error-message" id="idError"></small>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-row">
+          <label for="email">Email:</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email">
+
+          <small class="error-message" id="emailError"></small>
+        </div>
+
+        <!-- PHONE -->
+        <div class="form-row">
+          <label for="phone">Phone:</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="123-456-7890">
+
+          <small class="error-message" id="phoneError"></small>
+        </div>
+
+        <!-- ADDRESS 1 -->
+        <div class="form-row">
+          <label for="address1">Address Line 1:</label>
+
+          <input
+            type="text"
+            id="address1"
+            name="address1">
+
+          <small class="error-message" id="address1Error"></small>
+        </div>
+
+        <!-- ADDRESS 2 -->
+        <div class="form-row">
+          <label for="address2">Address Line 2:</label>
+
+          <input
+            type="text"
+            id="address2"
+            name="address2">
+
+          <small class="error-message" id="address2Error"></small>
+        </div>
+
+        <!-- CITY -->
+        <div class="form-row">
+          <label for="city">City:</label>
+
+          <input
+            type="text"
+            id="city"
+            name="city">
+
+          <small class="error-message" id="cityError"></small>
+        </div>
+
+        <!-- STATE FETCH -->
+        <div class="form-row">
+          <label for="state">State:</label>
+
+          <select id="state" name="state">
+            <option value="">Loading states...</option>
+          </select>
+
+          <small class="error-message" id="stateError"></small>
+        </div>
+
+        <!-- ZIP -->
+        <div class="form-row">
+          <label for="zip">Zip Code:</label>
+
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            maxlength="5">
+
+          <small class="error-message" id="zipError"></small>
+        </div>
+
+        <!-- CHECKBOXES -->
+        <fieldset>
+          <legend>Check all conditions that apply:</legend>
+
+          <label><input type="checkbox"> Chicken Pox</label>
+          <label><input type="checkbox"> Measles</label>
+          <label><input type="checkbox"> Mumps</label>
+          <label><input type="checkbox"> Covid-19</label>
+          <label><input type="checkbox"> Diabetes</label>
+        </fieldset>
+
+        <!-- RADIO -->
+        <fieldset>
+          <legend>Vaccinated?</legend>
+
+          <label><input type="radio" name="vaccinated"> Yes</label>
+          <label><input type="radio" name="vaccinated"> No</label>
+          <label><input type="radio" name="vaccinated"> Unsure</label>
+        </fieldset>
+
+        <!-- SLIDER -->
+        <div class="form-row">
+
+          <label for="painLevel">
+            Level of Pain:
+          </label>
+
+          <input
+            type="range"
+            id="painLevel"
+            min="1"
+            max="10"
+            value="5">
+
+          <span id="painValue">5</span>
+
+        </div>
+
+        <!-- TEXT AREA -->
+        <div class="form-row">
+
+          <label for="symptoms">
+            Describe Symptoms:
+          </label>
+
+          <textarea
+            id="symptoms"
+            rows="4"></textarea>
+
+        </div>
+
+        <!-- USER ID -->
+        <div class="form-row">
+
+          <label for="userId">
+            Desired User ID:
+          </label>
+
+          <input
+            type="text"
+            id="userId">
+
+          <small class="error-message" id="userIdError"></small>
+
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-row">
+
+          <label for="password">
+            Password:
+          </label>
+
+          <input
+            type="password"
+            id="password">
+
+          <small class="error-message" id="passwordError"></small>
+
+        </div>
+
+        <!-- REENTER PASSWORD -->
+        <div class="form-row">
+
+          <label for="rePassword">
+            Re-enter Password:
+          </label>
+
+          <input
+            type="password"
+            id="rePassword">
+
+          <small class="error-message" id="rePasswordError"></small>
+
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-row">
+
+          <button type="button" id="validateBtn">
+            Validate
+          </button>
+
+          <button type="reset">
+            Start Over
+          </button>
+
+          <button type="submit" id="submitBtn">
+            Submit
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- REVIEW SECTION -->
+    <aside class="review-section">
+
+      <h2>Error / Review Area</h2>
+
+      <div id="reviewArea">
+        Please review this information.
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- IFRAME SECTION -->
+  <section class="iframe-section">
+
+    <h2>Health Information Resources</h2>
+
+    <iframe
+      src="https://www.cdc.gov"
+      title="CDC Website"
+      width="100%"
+      height="400">
+    </iframe>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <p>
+      We'R'Docs Medical | MIS3371 Homework 4
+    </p>
+
+  </footer>
+
+</body>
+</html>
